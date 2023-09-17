@@ -1,0 +1,183 @@
+<!--
+    <div id="mensagem">
+    
+   </div>
+   <script>
+    function Nomemensagem(){
+      const nome = prompt("Escreva seu nome")
+      const mensagemDiv = document.getElementById("mensagem")
+      mensagemDiv.textContent = `Bem vindo, ${nome}`
+    }
+    Nomemensagem()
+   </script>
+  -->
+
+<!--
+    <div id="mensagem">
+
+    </div>
+         <script> 
+      function Mensgem(){
+     let Numero1 = parseInt(prompt("Digite um numero"))
+     let Numero2 = parseInt(prompt("Digite o outro numero"))
+     
+     let soma = Numero1 + Numero2
+
+     const menDiv = document.getElementById("mensagem")
+     menDiv.innerHTML = `${Numero1} + ${Numero2} é igual a <strong> ${soma} <strong>`
+    }
+    Mensgem()
+  </script>
+-->
+<!--
+  <div>
+    Digite um numero <input id="Numeros" type="number">
+    <br>
+  
+      <button onclick="CalcNumber()">Enviar</button>
+    </div>
+
+    <div id="Resultado">
+      Este é o resultado: 
+    </div>
+  </div>
+-->
+<!--
+   <script>
+    function CalcNumber(){
+      const Calculo = document.getElementById("Numeros")
+      let result = Calculo.value * 2 
+      
+       const  menDiv = document.getElementById("Resultado")
+       menDiv.textContent = `Este é o resultado: ${result}`
+        
+       }
+         
+  </script>
+
+  <style>
+  #Botom{
+  margin-top: 5px;
+  }
+  </style>
+-->
+<!--
+  <div>
+  Digite o Raio do circulo !<br> <input id="raio" type="number">
+    <br>
+    <button id="Botom" onclick="CalRaio()">Clique</button>
+  </div>
+  <div id="Resultado">
+  Este é o resultado
+  </div>
+  <script>
+    function CalRaio()
+    {
+      const NumberRaio = document.getElementById("raio")
+        let result = (NumberRaio.value * NumberRaio.value) * 3.14
+        const Endl = document.getElementById("Resultado")
+        Endl.textContent = `Este é o resultado ${result}`
+
+    }
+  </script>
+-->
+<!--
+  <style>
+    .img-container {
+      text-align: center;
+    }
+    #Primeiro{
+      width: 300px;
+      height: 300px;
+    }
+    .Imput-dado{
+      text-align: center;
+    }
+    #Gire{
+      color:red;
+    }
+    #Final{
+      color: greenyellow;
+    }
+  </style>
+  <div class="img-container">
+    <img  id="Primeiro" src="img.avif" alt="">
+  </div>
+  <div class="Imput-dado">
+    <h1 align="center" id="Gire">Gire o dado</h1><br>
+    <button onclick="exibirResultado()" id="Clique" align="center">Gire</button>
+    <div>
+      <h3 id="Final">VALOR</h3>
+    </div>
+  </div>
+  <script>
+    function exibirResultado() {
+      const numeroAleatorio = GirarDado();
+      const Endl = document.getElementById("Final");
+      Endl.textContent = `${numeroAleatorio}`;
+    }
+  
+    function GirarDado() {
+      const numeroAleatorio = Math.floor(Math.random() * 6) + 1;
+      return numeroAleatorio;
+    }
+  </script>
+  -->
+<!--
+  <div Id="Resultado"></div>
+  <script>
+  function Convert(){ 
+    let Celcius = 'Celcius'
+    let Fahrenheit = 'Fahrenheit'
+    let result =  prompt("Escolha entre Celcius ou Fahrenheit")
+      if (result==Celcius ){
+       let Primeiro = prompt("Digite um valor")
+        let Primsoma = (Primeiro * 1.8) + 32
+        console.log("Resultado "+Primsoma)
+        const Endl = document.getElementById("Resultado");
+          Endl.textContent = `${Primsoma}`;        
+      }
+      else if (result==Fahrenheit)  {
+       let Segundo = prompt("Digite um valor")
+       let Segsoma = (Segundo -32) /1.8
+       console.log("Resultado"+Segsoma)
+       const Endl = document.getElementById("Resultado");
+          Endl.textContent = `${Segsoma}`; 
+         }
+   }
+   Convert()
+  </script>
+-->
+<!--
+<div id="Senha">
+Sua senha:
+</div>
+<script>
+  function generateRandomPassword(length) {
+const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+const numbers = '0123456789';
+const specialCharacters = '!@#$%^&*()_+[]{}|;:,.<>?';
+
+const allCharacters = uppercaseLetters + lowercaseLetters + numbers + specialCharacters;
+let password = '';
+
+for (let i = 0; i < length; i++) {
+ const randomIndex = Math.floor(Math.random() * allCharacters.length);
+ password += allCharacters.charAt(randomIndex);
+}
+
+return password;
+}
+const desiredLength = parseInt(prompt("Digite o tamanho desejado da senha:"));
+
+if (isNaN(desiredLength) || desiredLength <= 0) {
+console.log("Por favor, insira um tamanho válido.");
+} else {
+const randomPassword = generateRandomPassword(desiredLength);
+console.log("Sua senha "+randomPassword)
+const end = document.getElementById("Senha")  
+ end.innerHTML("Sua senha:"+randomPassword)
+}
+generateRandomPassword()
+-->
